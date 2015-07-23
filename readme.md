@@ -1,29 +1,43 @@
-Boilerplate
-================
+# Boilerplate
 
 Meu querido conjunto de arquivos para iniciar projetos com rapidez, agora disponível aqui no github pra quem tiver interesse! Fique à vontade para enviar pull-requests ou dar um fork.
 
 ----------
 
-Estrutura de conteúdo do CSS
----------
+## Estrutura de conteúdo do CSS
+
+### A pasta "Commons"
 
 A pasta **commons** é utilizada para estilos que são comuns em praticamente todas as páginas da aplicação, como header, footer e outros comportamentos gerais como botões, títulos, formulários e tudo mais que houver em um possível guia visuail. Eu costumo fragmentar esses conteúdos em vários arquivos.
 
-Como eu costumo utilizar:
+**Sugestão**
 
-header.styl, footer.styl, main.styl, buttons.styl, etc.
+* header.styl
+* footer.styl 
+* main.styl
+* buttons.styl
+* etc.
+
+### A pasta "Partials"
 
 A pasta **partials** contém arquivo(s) de variáveis e outro com mixins. Um arquivo para construção de grid pode ser inserido nessa pasta.
 
-Sugestões (já existentes):
-var.styl e mixins.styl
+**Sugestão:**
 
-Já a pasta pages é utilizada para conteúdo específico de página. Como utilizo uma classe na tag <kbd>body</kbd> o arquivo possui todo conteúdo declarado após o seletor <kbd>body.classe-da-pagina</kbd>.
+* vars.styl
+* mixins.styl
+* etc.
 
-Como utilizo:
+### A pasta "Pages"
 
-page-home.styl, page-404.styl, page-contato.styl, etc.
+É utilizada para conteúdo específico de página. Como utilizo uma classe na tag <kbd>body</kbd> o arquivo possui todo conteúdo declarado após o seletor <kbd>body.classe-da-pagina</kbd>.
+
+**Sugestão:**
+
+* page-home.styl
+* page-404.styl
+* page-contato.styl
+* etc.
 
 Dentro das pastas já existem alguns exemplos. ;)
 
