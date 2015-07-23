@@ -1,0 +1,37 @@
+@import '../partials/vars'
+
+
+clearfix()
+	&:after
+		content ''
+		clear both
+		display block
+		
+bsizing()
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+		
+wc()
+	bsizing()
+	width content_width
+	margin 0 auto
+	display block
+	
+	@media only screen and (max-width content_width)
+		width 100%
+	
+transf(args)
+	-webkit-transform args
+	-moz-transform args
+	transform args
+	
+transi(args)
+	-webkit-transition args
+	-moz-transition args
+	transition args
+	
+bradius(args)
+	-webkit-border-radius args
+	-moz-border-radius args
+	border-radius args
