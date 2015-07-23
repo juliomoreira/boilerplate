@@ -40,4 +40,6 @@ Compilando o stylus
 ---------
 O gulp é responsável por compilar os arquivos .styl das pastas de CSS e juntar todo conteúdo deles dentro de um arquivo chamado **dist.css**, que fica dentro da pasta **assets/dist**.
 
-No terminal, execute o comando <kbd>gulp</kbd>. Ele iniciará o processo de watch - que fica observando alterações nos arquivos .styl e executa o processo que gera o arquivo dist.css. Sempre que algum arquivo da pasta for salvo, um novo arquivo dist.css será gerado.
+No terminal, execute o comando <kbd>gulp</kbd>. Ele executará o processo que gera o arquivo dist.css e fechará a stream.
+
+Caso queira gerar o dist.css e **manter o gulp acompanhando as alterações no arquivo**, execute a função <kbd>gulp task_watch</kbd>.

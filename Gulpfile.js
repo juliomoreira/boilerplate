@@ -1,25 +1,25 @@
-var gm_gulp = require('gulp'),
-	gm_stylus = require('gulp-stylus'),
+var gulp = require('gulp'),
+	stylus = require('gulp-stylus'),
 	gm_concat = require('gulp-concat'),
-	gm_filter = require('gulp-filter');
+	filter = require('gulp-filter'),
+	plumber = require('gulp-plumber');
 
 var dir_styles = 'assets/css/**/*.styl';
 var dir_scripts = 'assets/js/**/*.js';
 
-gm_gulp.task('watch', function () {
-	gm_gulp.watch(dir_styles, ['full_css']);
+gulp.task('task_watch', function () {
+	gulp.watch(dir_styles, ['task_compile_stylus']);
 });
 
-gm_gulp.task('full_css', function () {
-	var filter = gm_filter('assets/css/**/*.styl');
-	return gm_gulp.src([
-		'assets/css/**/*.styl'
-	])
-	.pipe(gm_stylus())
-	.pipe(filter)
-	.pipe(filter.restore())
+gulp.task('task_compile_stylus', function () {
+	var filter_styl = filter('assets/css/**/*.styl');
+	return gulp.src('assets/css/**/*.styl')
+	.pipe(plumber())
+	.pipe(stylus())
+	.pipe(filter_styl)
+	.pipe(filter_styl.restore())
 	.pipe(gm_concat('dist.css'))
-	.pipe(gm_gulp.dest('assets/dist'));
+	.pipe(gulp.dest('assets/dist'));
 });
 
-gm_gulp.task('default', ['watch', 'full_css']);
+gulp.task('default', ['task_compile_stylus']);
