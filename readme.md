@@ -12,27 +12,20 @@ A pasta **commons** é utilizada para estilos que são comuns em praticamente to
 
 Como eu costumo utilizar:
 
---- css/
------- commons/
---------- header.styl
---------- footer.styl
---------- main.styl
---------- buttons.styl
+header.styl, footer.styl, main.styl, buttons.styl, etc.
 
 A pasta **partials** contém arquivo(s) de variáveis e outro com mixins. Um arquivo para construção de grid pode ser inserido nessa pasta.
 
---- css/
------- partials/
----------- var.styl
----------- mixins.styl
+Sugestões (já existentes):
+var.styl e mixins.styl
 
 Já a pasta pages é utilizada para conteúdo específico de página. Como utilizo uma classe na tag <kbd>body</kbd> o arquivo possui todo conteúdo declarado após o seletor <kbd>body.classe-da-pagina</kbd>.
 
---- css/
------- pages/
----------- page-home.styl
----------- page-404.styl
----------- page-contato.styl
+Como utilizo:
+
+page-home.styl, page-404.styl, page-contato.styl, etc.
+
+Dentro das pastas já existem alguns exemplos. ;)
 
 Instalando o node e as dependências do projeto
 ---------
