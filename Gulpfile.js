@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 	stylus = require('gulp-stylus'),
 	gm_concat = require('gulp-concat'),
 	filter = require('gulp-filter'),
-	plumber = require('gulp-plumber');
+	plumber = require('gulp-plumber'),
+	minifyCss = require('gulp-minify-css');
 
 var dir_styles = 'assets/css/**/*.styl';
 var dir_scripts = 'assets/js/**/*.js';
@@ -18,7 +19,8 @@ gulp.task('task_compile_stylus', function () {
 	.pipe(stylus())
 	.pipe(filter_styl)
 	.pipe(filter_styl.restore())
-	.pipe(gm_concat('dist.css'))
+	.pipe(gm_concat('dist.min.css'))
+	.pipe(minifyCss())
 	.pipe(gulp.dest('assets/dist'));
 });
 

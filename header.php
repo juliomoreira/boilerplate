@@ -25,7 +25,7 @@
 		
 		<link href="assets/libs/reset.min.css" rel="stylesheet" type="text/css">	
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">	
-		<link href="assets/dist/dist.css" rel="stylesheet" type="text/css">
+		<link href="assets/dist/dist.min.css" rel="stylesheet" type="text/css">
 		
 	</head>
 	<body class="<?php echo $body_class ?>">
